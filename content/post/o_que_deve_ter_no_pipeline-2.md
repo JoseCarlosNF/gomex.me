@@ -19,7 +19,7 @@ Antes de você iniciar uma saga para encontrar a melhor ferramenta de CI/CD que 
  - Suporte a pipeline as code
  - Suporte a builds com container docker
  - Boa documentação
- - Opensource
+ - Open source
  - Comunidade ativa
 
 ### Suporte a pipeline as code
@@ -101,7 +101,7 @@ Vejam no exemplo abaixo:
 
 Se você não informar a versão específica de qual bundler você quer instalar, ele instalará a mais atual do momento e isso pode ser um problema, pois pacotes são atualizados o tempo todo e seu pipeline poderá quebrar porque você instalou de forma equivocada de algum binário a ser usado, pois o comportamento mudará.
 
-Uma das coisas mais importantes de um pipeline é garantir que ele é garantir o comportamento esperado. Quanto mais mecanismos você acrescentar para que cada execução de um pipeline sempre aconteça de maneira esperada, melhor ele será para você encontrar o problema de fato quando quebrar, pois você não terá dúvida que o motivo esteja de fato relacionado a modificação do código em questão.
+Uma das coisas mais importantes de um pipeline é garantir que ele tenha um comportamento esperado. Quanto mais mecanismos você acrescentar para que cada execução de um pipeline sempre aconteça de maneira esperada, melhor ele será para você encontrar o problema de fato quando quebrar, pois você não terá dúvida que o motivo esteja de fato relacionado a modificação do código em questão.
 
 #### Desvantagem ao utilizar "builds em container docker"? 
 
@@ -109,9 +109,9 @@ Lembra que cada execução de um pipeline é único e o container é destruído 
 
 A ideia é que qualquer dado que precise ser usado em outra etapa que seja persistido de outra forma. Segue algumas dicas:
 
+- Se for arquivo, a maioria das ferramentas oferece a possibilidade de montar um volume que pode ser compartilhado entre as etapas;
 
- Se for arquivo, a maioria das ferramentas oferece a possibilidade de montar um volume que pode ser compartilhado entre as etapas
-Se for uma imagem, biblioteca ou pacote, esse deve ir para um repositório e então no passo que precise ser usado, deve conter um comando para baixar a dependência e instalar.
+- Se for uma imagem, biblioteca ou pacote, esse deve ir para um repositório e então no passo que precise ser usado, deve conter um comando para baixar a dependência e instalar.
 
 ### Conclusão
 
